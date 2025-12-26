@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Git and GitHub Workflow Summary</title>
+  </head>
+
+  <body>
+    <h1>Git and GitHub Workflow Summary</h1>
+
+    <h2>1. Create repository on GitHub</h2>
+    <ol>
+      <li>Sign in to GitHub and click <strong>+ → New repository</strong>.</li>
+      <li>Choose a name (for example, <em>odin-foundations-course-</em>).</li>
+      <li>Leave it empty (no README) and click <strong>Create repository</strong>.</li>
+    </ol>
+
+    <h2>2. Clone repository to local machine</h2>
+    <ol>
+      <li>Open the terminal on Linux.</li>
+      <li>Change to your home directory:
+        <pre><code>cd ~</code></pre>
+      </li>
+      <li>Clone the repository:
+        <pre><code>git clone https://github.com/SEU_USUARIO/odin-foundations-course-.git
+cd odin-foundations-course-
+git status
+git remote -v</code></pre>
+      </li>
+    </ol>
+
+    <h2>3. Add project files</h2>
+    <ol>
+      <li>Create a folder for the project and copy the files:
+        <pre><code>mkdir links-and-images
+cp -r ~/links-and-images/* links-and-images/
+git status</code></pre>
+      </li>
+      <li>Untracked files are ready to be added to Git.</li>
+    </ol>
+
+    <h2>4. Create the first commit</h2>
+    <ol>
+      <li>Stage the files:
+        <pre><code>git add .
+git status</code></pre>
+      </li>
+      <li>Create the commit:
+        <pre><code>git commit</code></pre>
+        Use a subject and body, for example:
+        <pre><code>Add initial links and images project
+
+Add the first HTML files and images for the Odin Project exercise.</code></pre>
+      </li>
+      <li>Check the last commit:
+        <pre><code>git log -1</code></pre>
+      </li>
+    </ol>
+
+    <h2>5. Push commits to GitHub</h2>
+    <ol>
+      <li>Send the commits to the remote repository:
+        <pre><code>git push -u origin main</code></pre>
+      </li>
+      <li>Next time, only:
+        <pre><code>git push</code></pre>
+      </li>
+    </ol>
+
+    <h2>6. Daily workflow for new commits</h2>
+    <ol>
+      <li>Edit files in VS Code and save.</li>
+      <li>Check changes:
+        <pre><code>git status</code></pre>
+      </li>
+      <li>Stage changes:
+        <pre><code>git add arquivo.html   # or git add .</code></pre>
+      </li>
+      <li>Create a new commit:
+        <pre><code>git commit</code></pre>
+      </li>
+      <li>Push to GitHub:
+        <pre><code>git push</code></pre>
+      </li>
+    </ol>
+  </body>
+</html>
